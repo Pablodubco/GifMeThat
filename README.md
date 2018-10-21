@@ -22,22 +22,22 @@ Gif search app built around the [giphy API search endpoint](https://developers.g
 **Flow**
 
 1. When the page is loaded, an event is triggered prompting the code to loop through the **_initialButtons_** array creating a button with the search word for each string inside the array. Each button is assigned an on-click event to call the **_[makeQuery](#functions)_** function:
-  * The inputs (gray themed area) define query parameters from the giphy api. Except for the additional search term (any, funny, cute, cool, trippy, wtf), the number of results and rating are separate parameters in the query.
-  * The search buttons, in combination with the additional search term (any, funny, cute, cool, trippy, wtf) specify the key words to search for in the giphy database.
+   * The inputs (gray themed area) define query parameters from the giphy api. Except for the additional search term (any, funny, cute, cool, trippy, wtf), the number of results and rating are separate parameters in the query.
+   * The search buttons, in combination with the additional search term (any, funny, cute, cool, trippy, wtf) specify the key words to search for in the giphy database.
 1. The **_[makeQuery](#functions)_** builts a query and feeds it to the **_[callGiphy](#functions)_** function to make an AJAX call to the giphy api.
 1. The AJAX response is an array of objects, each one containing the gif data. A loop inside the **_[callGiphy](#functions)_** function iterates through each object in the array and copies data inside a local gif object. The gif object has the following properties, all in string format:
-  * **title:** The title of the gif.
-  * **rating:** The mpaa rating of the gif.
-  * **srcStill:** The url of a fixed height static image for the gif.
-  * **srcMoving:** The url of a fixed height animated image for the gif.
-  * **srcOriginal:** The url of the original animated image for the gif.
-  * **imgState:** A custom property that will store the values "static" or "active" for control of gif image animation.
+   * **title:** The title of the gif.
+   * **rating:** The mpaa rating of the gif.
+   * **srcStill:** The url of a fixed height static image for the gif.
+   * **srcMoving:** The url of a fixed height animated image for the gif.
+   * **srcOriginal:** The url of the original animated image for the gif.
+   * **imgState:** A custom property that will store the values "static" or "active" for control of gif image animation.
 1. The local gif object is added to a global array variable **_gifArray_**.
 1. Finally, the gif object is passed as an argument to the function **_[displayGif](#funcions)_**, along with its index position inside the **_gifArray_**.
 1. The function **_[displayGif](#funcions)_** will create a Bootstrap v4 card with the following elements:
-  * The static fixed height gif image, with an on-click event that toggles it's source url between the static and animated images by taking the data from the local corrsponding gif object.
-  * The title of the gif overlayed on top of the gif image.
-  * Four buttons for sharing the gif: on Facebook, Twitter, Whatsapp or download a local copy respectively. The gif image shared is the original source url stored inside the **_srcOriginal_** property of the local gif object.
+   * The static fixed height gif image, with an on-click event that toggles it's source url between the static and animated images by taking the data from the local corrsponding gif object.
+   * The title of the gif overlayed on top of the gif image.
+   * Four buttons for sharing the gif: on Facebook, Twitter, Whatsapp or download a local copy respectively. The gif image shared is the original source url stored inside the **_srcOriginal_** property of the local gif object.
 
 | [Main index](#contents) |
 | :---: |
