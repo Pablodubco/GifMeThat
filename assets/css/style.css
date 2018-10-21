@@ -1,0 +1,319 @@
+/*!
+Selected and modified animations from:
+ * animate.css -http://daneden.me/animate
+ * Version - 3.7.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ * Copyright (c) 2018 Daniel Eden
+ */
+
+html { /*For sticky footer */
+    position: relative;
+    min-height: 100%;
+}
+  
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("../images/bg_01.jpg");
+    margin-bottom: 44px; /*For sticky footer */
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Nunito+Sans', sans-serif;
+    font-weight: 800;
+}
+
+.footer {/*For sticky footer*/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 44px;
+}
+
+.bg-black{
+    background-color: black;
+}
+
+.bg-darker{
+    background-color: rgb(15, 15, 15);
+}
+
+.bg-red{
+    background-color: rgb(102,0,0);
+}
+
+.bg-green{
+    background-color: rgb(16,102,73);
+}
+
+.bg-blue{
+    background-color: rgb(10, 2, 46);
+}
+
+.text-red{
+    color: rgb(102,0,0);
+}
+
+.text-green{
+    color: rgb(16,102,73);
+}
+
+.text-blue{
+    color: rgb(16,3,33);
+}
+
+.btn-red{
+    border: 1px solid rgb(102,0,0);
+    background-color: rgb(102,0,0);
+    color: white;
+}
+
+.btn-red:hover{
+    border: 1px solid rgb(126, 0, 0);
+    background-color: rgb(126,0,0);
+    color: white;
+}
+
+.btn-green{
+    border: 1px solid rgb(5, 77, 53);
+    background-color: rgb(5, 77, 53);
+    color: white;
+}
+
+.btn-green:hover{
+    border: 1px solid rgb(16,102,73);
+    background-color: rgb(16,102,73);
+    color: white;
+}
+
+.btn-blue{
+    border: 1px solid rgb(10, 2, 46);
+    background-color: rgb(10, 2, 46);
+    color: white;
+}
+
+.btn-blue:hover{
+    border: 1px solid rgb(16, 4, 71);
+    background-color: rgb(16, 4, 71);
+    color: white;
+}
+
+.btn-download{
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    color:white;
+    background-color: rgb(146, 0, 146);
+}
+.btn-download:hover{
+    color:white;
+    background-color: rgb(112, 0, 112);
+}
+
+.btn-facebook{
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    color:white;
+    background-color: #3b5998;
+}
+.btn-facebook:hover{
+    color:white;
+    background-color: #2d4373;
+}
+
+.btn-twitter{
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    color:white;
+    background-color: #55acee;
+}
+.btn-twitter:hover{
+    color:white;
+    background-color: #2795e9;
+}
+
+.btn-whatsapp{
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    color:white;
+    background-color: #25D366;
+}
+.btn-whatsapp:hover{
+    background-color: #1da851;
+}
+
+.rubberBand { /*animate.css*/
+    animation-name: rubberBand;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 0.75s;
+    animation-iteration-count: 1;
+}
+
+#FooterThinLine{
+    background-color:rgb(16,102,73);
+    padding: 7px;
+}
+
+#FooterThickLine{
+    background-color: rgb(29, 29, 29);
+    padding: 15px;
+}
+
+/* Animations */
+@keyframes rubberBand { /*animate.css*/
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    10% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    14% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    18% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    24% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    36% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes bounceIn { /*animate.css*/
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.9, 0.9, 0.9);
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+      opacity: 1;
+      -webkit-transform: scale3d(1.03, 1.03, 1.03);
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+      -webkit-transform: scale3d(0.97, 0.97, 0.97);
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+}
+  
+
+/*Card columns for different screen sizes*/
+@media only screen and (min-width: 768px) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
+
+/*Resizing on smaller screens for responsive*/
+@media only screen and (max-width: 767px) {
+    .udResizeText{
+        font-size: small !important;
+    }
+    .udHeader{
+        text-align: center;
+        font-size: 28px;
+    }
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+/*Resizing on mobile screens for responsive*/
+@media only screen and (max-width: 575px) {
+    .udResizeText{
+        font-size: x-small !important;
+    }
+    .udHeaderCard{
+        width: 75%;
+    }
+    .udHeaderGif{
+        display: flex !important;
+        flex-flow: row wrap !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+    .udHeaderCard{
+        flex: 1 0 0% !important;
+    }
+    .udHeader{
+        text-align: center;
+        font-size: 24px;
+    }
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+
+/*Just in case, this fixes some bugs when rendering page for printing*/
+@media print { 
+    .container {
+      width: auto;
+    }
+}

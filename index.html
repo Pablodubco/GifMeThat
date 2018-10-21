@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gif search app</title>
+
+  <!-- Link to the jQuery Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <!--Fonts and icons-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans|Raleway" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+
+<!--
+    NOTE
+    User defined classes, used for custom style.css have [ud][name] syntax.
+-->
+
+<!--_________________________Navbar BEGIN____________________________-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-darker">
+        <a class="navbar-brand text-white" href="#">Gif Search App</a>
+    </nav>
+    <div id="FooterThinLine"></div>
+<!--_________________________Navbar END____________________________-->
+
+<!-- ___________________________MAIN Container BEGIN_____________________________ -->
+    <div class="container" id="mainContainer"> 
+
+        <!-- __________________Header BEGIN____________________ -->
+        <div class="row py-2 mx-3 bg-darker"></div>
+        <div class="row py-2 mx-3 justify-content-center bg-light" style="position:relative">
+            <div class="col-md-5 col-sm-10 col-9 align-self-center">
+                <div class="card-group udHeaderGif">
+                    <div class="card rubberBand udHeaderCard" style="animation-delay: 2s">
+                        <img class="card-img-top udHeaderCardGif text-center" src="assets/images/G.gif">
+                    </div>
+                    <div class="card rubberBand udHeaderCard" style="animation-delay: 2.5s">
+                        <img class="card-img-top udHeaderCardGif text-center" src="assets/images/I.gif">
+                    </div>
+                    <div class="card rubberBand udHeaderCard" style="animation-delay: 3s">
+                        <img class="card-img-top udHeaderCardGif text-center" src="assets/images/F.gif">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-12 align-self-center">
+                <h1 class="udHeader"><span class="text-blue">ME</span> <span class="text-green">THAT</span><span class="text-red">!</span></h1>
+            </div>
+        </div>
+        <div class="row py-2 mx-3 bg-darker"></div>
+        <!-- __________________Header END____________________ -->
+        <!-- __________________Buttons Display Area BEGIN____________________ -->
+        <div class="row py-2 mx-3 justify-content-center bg-secondary">
+            <!-- Number of gifs controls-->
+            <div class="col-12 text-center">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-dark active udResizeText" data-value="10" udgifnumber>
+                        <input type="radio" name="gifnumber" autocomplete="off" checked> 10 Gifs
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="15" udgifnumber>
+                        <input type="radio" name="gifnumber" autocomplete="off"> 15 Gifs
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="20" udgifnumber>
+                        <input type="radio" name="gifnumber" autocomplete="off"> 20 Gifs
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="30" udgifnumber>
+                        <input type="radio" name="gifnumber" autocomplete="off"> 30 Gifs
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="50" udgifnumber>
+                        <input type="radio" name="gifnumber" autocomplete="off"> 50 Gifs
+                    </label>
+                </div>
+            </div>
+            <!-- Rating of gifs controls-->
+            <div class="col-12 text-center">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-dark active udResizeText" data-value="any" udgifrating>
+                        <input type="radio" name="gifrating" autocomplete="off" checked> any
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="g" udgifrating>
+                        <input type="radio" name="gifrating" autocomplete="off"> family
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="pg" udgifrating>
+                        <input type="radio" name="gifrating" autocomplete="off"> pg
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="pg-13" udgifrating>
+                        <input type="radio" name="gifrating" autocomplete="off"> pg-13
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="r" udgifrating>
+                        <input type="radio" name="gifrating" autocomplete="off"> teen
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="nsfw" udgifrating>
+                        <input type="radio" name="gifrating" autocomplete="off"> adult
+                    </label>
+                </div>
+            </div>
+            <!-- Additional search modifier -->
+            <div class="col-12 text-center">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-dark active udResizeText" data-value="any" udgiftheme>
+                        <input type="radio" name="giftheme" autocomplete="off" checked> any
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="funny" udgiftheme>
+                        <input type="radio" name="giftheme" autocomplete="off"> funny
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="cute" udgiftheme>
+                        <input type="radio" name="giftheme" autocomplete="off"> cute
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="cool" udgiftheme>
+                        <input type="radio" name="giftheme" autocomplete="off"> cool
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="trippy" udgiftheme>
+                        <input type="radio" name="giftheme" autocomplete="off"> trippy
+                    </label>
+                    <label class="btn btn-dark udResizeText" data-value="wtf" udgiftheme>
+                        <input type="radio" name="giftheme" autocomplete="off"> wtf
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row py-2 mx-3 justify-content-center bg-light">
+            <div class="col-12 align-self-center text-center" id="colDivSearchButtons">
+            </div>
+        </div>
+        <div class="row py-2 mx-3 justify-content-center bg-light">
+            <div class="col-8 align-self-center text-center">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control  udResizeText" placeholder="Add another category..." aria-label="Add another category..." aria-describedby="button-addon2" id="inputCategory">
+                    <div class="input-group-append">
+                        <button class="btn btn-dark  udResizeText" type="button" id="btnAdd">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ___________________Buttons Display Area END-->
+        <!-- __________________Gifs display area____________________ -->
+        <div class="row py-2 mx-3 bg-darker justify-content-center">
+            <h5 class="text-white">Here you go!</h5>
+        </div>
+        <div class="row py-2 mx-3 justify-content-center bg-light">
+            <div class="col-12 my-0 mx-0">
+                <div class="card-columns" id="gifViewingArea">
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- _________________________MAIN Container END________________________________ --> 
+
+<div class="emptyBottomSpace"></div> <!--Pushes the footer down, so there's empty space for the content-->
+
+<footer class="footer">
+    <div id="FooterThinLine"></div>
+    <div class="bg-darker text-white text-center" id="FooterThickLine">Copyright ©</div>
+</footer>
+    
+<!--Game JavaScript-->
+    <script src="assets/javascript/app.js"></script>
+
+<!--Import Bootstrap JavaScript for dynamic elements-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
