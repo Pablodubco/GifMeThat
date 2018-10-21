@@ -21,7 +21,7 @@ var bgColorClasses = [                                                      // C
 // API Controls------------------------------------------------------
 // For using the giphy api
 var apiKey = "zF1H1U4DC1CpWy812SnG2QwIUgQR51g5";
-var baseurl = "http://api.giphy.com/v1/gifs/search?";
+var baseurl = "https://api.giphy.com/v1/gifs/search?";
 
 // Dynamic variables-------------------------------------------------
 // Modified on each call
