@@ -156,6 +156,36 @@ h1,h2,h3,h4,h5{
     animation-iteration-count: 1;
 }
 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(16, 102, 73, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+} 
+.navbar-toggler {
+    border-style:none !important;
+}
+.nav-item{
+    font-size: 16px;
+    color: #777777;
+}
+.nav-item:hover{
+    font-size: 16px;
+    color: white;
+    background-color:rgb(16,102,73);
+}
+.nav-link{
+    padding: 0px 14px !important;
+    margin: auto;
+    font-size: 16px;
+}
+.udDropDown{
+    border: none;
+    color: #777777;
+    background: none;
+    cursor: pointer;
+}
+.udDropLink:hover{
+    color:rgb(16,102,73) !important;
+}
+
 #FooterThinLine{
     background-color:rgb(16,102,73);
     padding: 7px;
